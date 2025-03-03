@@ -19,7 +19,7 @@ const tagList = [
 ]
 
 export default async function Home({ searchParams }: { searchParams: { tags?: string } }) {
-  const { posts } = await fetchCuratedImages(await searchParams.tags)
+  const { posts } = await fetchCuratedImages((await searchParams).tags)
   return (
     <div className="flex h-screen p-8 gap-4 font-[family-name:var(--font-geist-sans)]">
       <LikedImages />
