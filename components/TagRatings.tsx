@@ -9,7 +9,7 @@ type TagScore = {
   score: number;
 }
 
-export default function TagRatings({ threshold = 0, count = 10 }: { threshold?: number, count?: number }) {
+export default function TagRatings({ threshold = 0, count = 15 }: { threshold?: number, count?: number }) {
   const { scores } = useSmashStore()
   const tagData: TagScore[] = Object.entries(scores).map(([tag, score]) => ({ tag, score }))
   const sorted = tagData.toSorted((a, b) => b.score - a.score)
@@ -17,7 +17,7 @@ export default function TagRatings({ threshold = 0, count = 10 }: { threshold?: 
   const bottom = sorted.filter(({ score }) => score < -threshold).slice(-count)
 
   return (
-    <aside className="bg-slate-800 border-4 border-slate-600 p-4 rounded-lg flex-0 w-60">
+    <aside className="bg-slate-800 border-4 border-slate-600 p-4 rounded-lg flex-0 w-60 overflow-auto">
       <h1 className="mb-1 font-bold text-lg">Tag Ratings</h1>
       <h2 className="mt-2">Top Tags</h2>
       <TagList tagData={top} />
@@ -33,8 +33,8 @@ function TagList({ tagData }: { tagData: TagScore[] }) {
       {tagData.map(({ tag, score }) => (
         <li key={tag} className="flex justify-between">
           <a className="truncate underline text-blue-300" href={`https://e621.net/posts?tags=${tag}`}>
-            {tag}</a> <span className={score > 0 ? "text-green-400" : "text-red-400"}>{score}</span>
-
+            {tag}
+          </a> <span className={score > 0 ? "text-green-400" : "text-red-400"}>{score}</span>
         </li>
       ))}
     </ol>
