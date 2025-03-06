@@ -14,6 +14,7 @@ After that, go to your profiles page, and click the API Key View link. Copy that
 API_KEY="1nHrmzmsvJf26EhU1F7CjnjC" # Not a real API key
 USERNAME="rocketraccoon"
 DEFAULT_TAGS="order:random rating:s score:>50 solo -comic -webm -swf"
+IMAGE_BOARD_URL="https://e926.net
 ```
 
 ### Don't forget to install NPM packages

@@ -1,7 +1,39 @@
+import { Post } from "@/types/apiTypes";
 import { create } from "zustand";
 
-type Store = {}
+type TagName = string
+type Scores = Record<TagName, number>
 
-const useSmashStore = create<Store>()((set) => ({}))
+type Store = {
+  scores: Scores;
+  smashList: Post[];
+  index: number;
+  resetIndex: () => void;
+  smash: (post: Post) => void;
+  pass: (post: Post) => void;
+}
+
+// save
+function addTagScores(scores: Scores, tags: TagName[], addValue: number): Scores {
+  const scoreCopies = { ...scores }
+  tags.forEach(tag => {
+    const score = scoreCopies[tag] || 0;
+    scoreCopies[tag] = score + addValue
+  })
+  return scoreCopies;
+}
+
+const useSmashStore = create<Store>()((set) => ({
+  scores: {},
+  smashList: [],
+  index: 0,
+  resetIndex: () => set(() => ({})),
+  smash: (post: Post) => set(state => {
+    return {}
+  }),
+  pass: (post: Post) => set(state => {
+    return {}
+  }),
+}))
 
 export default useSmashStore
