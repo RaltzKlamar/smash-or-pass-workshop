@@ -1,4 +1,4 @@
-import { Post } from "@/types/apiTypes";
+import { Post } from "@/config/apiTypes";
 import { create } from "zustand";
 
 type TagName = string
@@ -13,7 +13,6 @@ type Store = {
   pass: (post: Post) => void;
 }
 
-// save
 function addTagScores(scores: Scores, tags: TagName[], addValue: number): Scores {
   const scoreCopies = { ...scores }
   tags.forEach(tag => {

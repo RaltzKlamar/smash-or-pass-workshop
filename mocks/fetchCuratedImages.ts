@@ -1,4 +1,4 @@
-import { Post } from '@/types/apiTypes'
+import { Post } from '@/config/apiTypes'
 import curatedData from './data.json'
 
 export default async function fetchCuratedImages(tags: string = "") {

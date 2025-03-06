@@ -1,9 +1,10 @@
 "use client"
 
-import { FormEvent } from "react"
+import { ChangeEvent, FormEvent } from "react"
 
 export default function TagInput() {
   const onSubmit = (event: FormEvent) => { }
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => { }
 
   return <form className="flex gap-2" onSubmit={onSubmit}>
     <label htmlFor="tag-search">Search Tags</label>
