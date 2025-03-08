@@ -32,9 +32,15 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+## More Info
 
-Intro to technologies used:
+View Completed Code on the [full-code](https://github.com/RaltzKlamar/smash-or-pass-workshop/tree/full-code) branch.
+
+You can view the slides here: https://docs.google.com/presentation/d/1S6qukKDpPKgnFbHG4_OU9KKi_stgmFt_7juWwQb6zUs/edit?usp=sharing
+
+Raltz can be found on [BlueSky (18+ Only)](https://bsky.app/profile/raltzklamar.bsky.social) and [Telegram](https://telegram.me/raltzklamar).
+
+### Technology Tutorials
 
 * [React](https://react.dev/learn)
 * [Next](https://nextjs.org/learn)
