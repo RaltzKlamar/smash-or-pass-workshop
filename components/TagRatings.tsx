@@ -1,6 +1,7 @@
 "use client"
 
 import { POSTS_URL } from "@/config/urlUtils";
+import useSmashStore from "@/util/smashStore";
 
 const THRESHOLD = 0
 const MAX_TAGS = 15
@@ -11,8 +12,11 @@ type TagScore = {
 }
 
 export default function TagRatings() {
-  const top: TagScore[] = []
-  const bottom: TagScore[] = []
+  const { scores } = useSmashStore()
+  const tagData: TagScore[] = Object.entries(scores).map(([tag, score]) => ({ tag, score }))
+  const sorted = tagData.sort((a, b) => b.score - a.score)
+  const top: TagScore[] = sorted.filter(({ score }) => score > THRESHOLD).slice(0, MAX_TAGS)
+  const bottom: TagScore[] = sorted.filter(({ score }) => score < -THRESHOLD).slice(-MAX_TAGS)
 
   return (
     <aside className="bg-slate-800 border-4 border-slate-600 p-4 rounded-lg w-60 overflow-y-auto">
@@ -29,6 +33,9 @@ export default function TagRatings() {
 function TagList({ tagData }: { tagData: TagScore[] }) {
   return (
     <ol className="mx-2">
+      {tagData.map(({ tag, score }) => (
+        <TagRating key={tag} tag={tag} score={score} />
+      ))}
     </ol>
   )
 }

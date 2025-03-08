@@ -25,13 +25,18 @@ function addTagScores(scores: Scores, tags: TagName[], addValue: number): Scores
 const useSmashStore = create<Store>()((set) => ({
   scores: {},
   smashList: [],
-  index: 0,
-  resetIndex: () => set(() => ({})),
+  index: 1,
+  resetIndex: () => set(() => ({ index: 0 })),
   smash: (post: Post) => set(state => {
-    return {}
+    const index = state.index + 1
+    const scores = addTagScores(state.scores, post.tags, 1)
+    const smashList = [post, ...state.smashList]
+    return { index, scores, smashList }
   }),
   pass: (post: Post) => set(state => {
-    return {}
+    const index = state.index + 1
+    const scores = addTagScores(state.scores, post.tags, -1)
+    return { index, scores }
   }),
 }))
 
