@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Prereqs
 
+### Set up Node
+
+You'll need Node installed (at least v18.15.0). Instructions on how to set up node can be found [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). If you're using a Windows machine, you may also benefit from setting up [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) and then following the instructions for [installing Node on WSL](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl).
+
 ### e621 API Key and username
 
 Make an account on [e621](https://e621.net/) ([e926](https://e926.net/) for the "SFW" version) if you don't have one.
