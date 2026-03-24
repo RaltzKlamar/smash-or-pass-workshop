@@ -1,11 +1,17 @@
-import { E621ApiResponse } from "../config/apiTypes";
-import { API_KEY, USERNAME } from "../config/environment";
+// 1: Hello World
 
-const headers = {
-  "Authorization": "Basic " + btoa(`${USERNAME}:${API_KEY}`),
-  "User-Agent": `Smash-or-Pass/1.0 (by ${USERNAME} on e621)`
-}
+// 2: Variables
 
-export default async function fetchImages(tags = ""): Promise<E621ApiResponse> {
-  return { posts: [] }
-}
+// 3: functions
+
+// 4: Objects
+
+// 5: types
+
+// 6: string templates
+
+// 7: importing
+
+// 8: async/await functions and Promises
+
+// 9: Fetch from the API
