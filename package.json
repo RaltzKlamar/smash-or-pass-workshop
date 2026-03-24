@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:api": "tsx ./apiTestRun.js"
+    "dev:api": "tsx --env-file=.env ./apiTestRun.js"
   },
   "dependencies": {
     "classnames": "^2.5.1",
