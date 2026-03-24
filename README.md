@@ -2,29 +2,24 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Prereqs
 
-### Set up Node
+You have a GitHub account
 
-You'll need Node installed (at least v18.15.0). Instructions on how to set up node can be found [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). If you're using a Windows machine, you may also benefit from setting up [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) and then following the instructions for [installing Node on WSL](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl).
+OR
 
-### e621 API Key and username
+You have a Node environment set up locally and can run code
 
-Make an account on [e621](https://e621.net/) ([e926](https://e926.net/) for the "SFW" version) if you don't have one.
+## Setup 
 
-After that, go to your profiles page, and click the API Key View link. Copy that value, and use it to make a .env file
-(save it in the project directory) with your user name and some default tags:
+### Easy - Use GitHub Codespaces
 
-```Dotenv
-# .env
-API_KEY="1nHrmzmsvJf26EhU1F7CjnjC" # Not a real API key
-USERNAME="rocketraccoon"
-DEFAULT_TAGS="order:random rating:s score:>50 solo -comic -webm -swf"
-```
+Log into GitHub first. Then, [make a new Codespace from this repository](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=941940938&ref=main&geo=UsEast). At this point, you're going to see a banner that reads
 
-### Don't forget to install NPM packages
+> Codespace usage for this repository is paid for by [Your Username].
 
-```bash
-npm i
-```
+By default, GitHub accounts have a $0 budget allocated for Codespaces with the setting enabled to block usage if you would go over budget. Codespaces can be used for up to 60 hours a month before it would incur any costs. You can go to [Your Budget Settings](https://github.com/settings/billing/budgets) to make sure that this is the case.
+
+Once it starts, you just need to wait for it to finish loading. Once it says "press any key to continue," hit any key, then you can move to Getting Started.
+
 
 ## Getting Started
 
@@ -34,22 +29,23 @@ First, run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result (clicking this link will work as intended in Codespaces).
 
-## More Info
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-View Completed Code on the [full-code](https://github.com/RaltzKlamar/smash-or-pass-workshop/tree/full-code) branch.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-You can view the slides here: https://docs.google.com/presentation/d/1S6qukKDpPKgnFbHG4_OU9KKi_stgmFt_7juWwQb6zUs/edit?usp=sharing
+## Learn More
 
-Raltz can be found on [BlueSky (18+ Only)](https://bsky.app/profile/raltzklamar.bsky.social) and [Telegram](https://telegram.me/raltzklamar).
+To learn more about Next.js, take a look at the following resources:
 
-### Technology Tutorials
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-* [React](https://react.dev/learn)
-* [Next](https://nextjs.org/learn)
-* [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html#get-started)
-* [JavaScript](https://www.codecademy.com/learn/introduction-to-javascript) - Great for new programmers
-* [Tailwind](https://tailwindcss.com/build-uis-that-dont-suck)
-* [Zustand](https://refine.dev/blog/zustand-react-state/)
-* [Zod](https://didoesdigital.com/blog/zod-overview/)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
