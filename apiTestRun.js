@@ -1,4 +1,4 @@
-const fetchImages = require("./util/fetchImages.ts");
+import * as fetchImages from "./util/fetchImages.ts";
 
 if (fetchImages && typeof fetchImages === "function") {
     fetchImages();
