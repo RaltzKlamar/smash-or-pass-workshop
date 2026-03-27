@@ -74,4 +74,4 @@ export type File = z.infer<typeof fileSchema>
 export type Preview = z.infer<typeof previewSchema>
 export type Tag = z.infer<typeof tagsSchema>
 export type Post = z.infer<typeof postSchema>
-export type E621ApiResponse = z.infer<typeof apiResponseSchema>
+export type ApiGetPostsResponse = z.infer<typeof apiResponseSchema>

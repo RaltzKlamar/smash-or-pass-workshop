@@ -1,6 +1,6 @@
 import { API_POSTS_URL } from "@/config/urlUtils";
 import { DEFAULT_TAGS, USERNAME } from "../config/environment";
-import { E621ApiResponse, Post, apiResponseSchema } from "@/config/apiTypes";
+import { ApiGetPostsResponse, Post, apiResponseSchema } from "@/config/apiTypes";
 
 let headers = { }
 

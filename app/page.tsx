@@ -1,7 +1,7 @@
 import ImageDisplay from "@/components/ImageDisplay";
 import LikedImages from "@/components/LikedImages";
 import TagRatings from "@/components/TagRatings";
-import { E621ApiResponse, Post } from "@/config/apiTypes";
+import { Post } from "@/config/apiTypes";
 import fetchImages from "@/util/fetchImages";
 
 export default async function Home() {

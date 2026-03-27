@@ -11,6 +11,7 @@
     "test-api": "tsx --env-file=.env ./apiTestRun.js"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
     "classnames": "^2.5.1",
     "next": "16.2.1",
     "react": "^19.2.4",
