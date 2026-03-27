@@ -1,6 +1,6 @@
-import * as fetchImages from "./util/fetchImages.ts";
+import * as learning from './util/learning'
 
-if (fetchImages?.default && typeof fetchImages.default === "function") {
-    const data = await fetchImages.default();
-    console.log(data);
+if (learning?.default && typeof learning.default === "function") {
+    const data = await learning.default();
+    console.log(data)
 }
