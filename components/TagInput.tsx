@@ -2,6 +2,7 @@
 
 import { ChangeEvent, FormEvent } from "react"
 
+// TODO 8: track tags input and change URL on submit
 export default function TagInput() {
   const onSubmit = (event: FormEvent) => { }
   const onChange = (event: ChangeEvent<HTMLInputElement>) => { }

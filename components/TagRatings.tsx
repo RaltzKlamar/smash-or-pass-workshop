@@ -10,6 +10,7 @@ type TagScore = {
   score: number;
 }
 
+// TODO 6: Pull tags from smashStore and display them
 export default function TagRatings() {
   const top: TagScore[] = []
   const bottom: TagScore[] = []

@@ -4,6 +4,7 @@ import { Post } from "@/config/apiTypes";
 import React from "react";
 
 export default function SmashPass({ post, postLimit }: { post: Post, postLimit: number }) {
+  // TODO 3: Update smashStore with posts
   const smash = () => { }
   const pass = () => { }
 
@@ -14,5 +15,6 @@ export default function SmashPass({ post, postLimit }: { post: Post, postLimit: 
 }
 
 function Button({ onClick, children, className }: { onClick: () => void, children: React.ReactNode, className?: string }) {
+  // TODO 4: Add classes to make buttons look nice
   return <button className="" onClick={onClick}>{children}</button>
 }

@@ -22,6 +22,7 @@ function addTagScores(scores: Scores, tags: TagName[], addValue: number): Scores
   return scoreCopies;
 }
 
+// TODO 2: Finish SmashStore
 const useSmashStore = create<Store>()((set) => ({
   scores: {},
   smashList: [],
