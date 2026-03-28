@@ -1,6 +1,14 @@
-import { z } from 'zod';
+import { z } from "zod";
 
-const extensions = ["png", "jpg", "jpeg", "gif", "apng", "webm", "swf"] as const
+const extensions = [
+  "png",
+  "jpg",
+  "jpeg",
+  "gif",
+  "apng",
+  "webm",
+  "swf",
+] as const;
 
 const fileSchema = z.object({
   width: z.number().int(),
@@ -8,13 +16,13 @@ const fileSchema = z.object({
   ext: z.enum(extensions),
   size: z.number().int(),
   md5: z.string().length(32),
-  url: z.union([z.url(), z.null()]).transform(url => url ?? ''),
+  url: z.union([z.url(), z.null()]).transform((url) => url ?? ""),
 });
 
 const previewSchema = z.object({
   width: z.number().int(),
   height: z.number().int(),
-  url: z.union([z.url(), z.null()]).transform(url => url ?? ''),
+  url: z.union([z.url(), z.null()]).transform((url) => url ?? ""),
 });
 
 const scoreSchema = z.object({
@@ -43,12 +51,16 @@ const relationshipsSchema = z.object({
 });
 
 export enum Ratings {
-  Safe = 's',
-  Questionable = 'q',
-  Explicit = 'e',
+  Safe = "s",
+  Questionable = "q",
+  Explicit = "e",
 }
 
-const ratingEnum = z.enum([Ratings.Safe, Ratings.Questionable, Ratings.Explicit])
+const ratingEnum = z.enum([
+  Ratings.Safe,
+  Ratings.Questionable,
+  Ratings.Explicit,
+]);
 
 const postSchema = z.object({
   id: z.number().int(),
@@ -56,8 +68,8 @@ const postSchema = z.object({
   updated_at: z.string().datetime({ offset: true }),
   file: fileSchema,
   preview: previewSchema,
-  score: scoreSchema.transform(score => score.total),
-  tags: tagsSchema.transform(tags => Object.values(tags).flat()),
+  score: scoreSchema.transform((score) => score.total),
+  tags: tagsSchema.transform((tags) => Object.values(tags).flat()),
   rating: ratingEnum,
   sources: z.array(z.string()),
   relationships: relationshipsSchema,
@@ -66,12 +78,12 @@ const postSchema = z.object({
 });
 
 export const apiResponseSchema = z.object({
-  posts: z.array(postSchema)
-})
+  posts: z.array(postSchema),
+});
 
-export type Extensions = typeof extensions[number]
-export type File = z.infer<typeof fileSchema>
-export type Preview = z.infer<typeof previewSchema>
-export type Tag = z.infer<typeof tagsSchema>
-export type Post = z.infer<typeof postSchema>
-export type ApiGetPostsResponse = z.infer<typeof apiResponseSchema>
+export type Extensions = (typeof extensions)[number];
+export type File = z.infer<typeof fileSchema>;
+export type Preview = z.infer<typeof previewSchema>;
+export type Tag = z.infer<typeof tagsSchema>;
+export type Post = z.infer<typeof postSchema>;
+export type ApiGetPostsResponse = z.infer<typeof apiResponseSchema>;

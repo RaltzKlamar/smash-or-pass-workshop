@@ -8,7 +8,7 @@ OR
 
 You have a Node environment set up locally and can run code
 
-## Setup 
+## Setup
 
 ### Easy - Use GitHub Codespaces
 
@@ -19,7 +19,6 @@ Log into GitHub first. Then, [make a new Codespace from this repository](https:/
 By default, GitHub accounts have a $0 budget allocated for Codespaces with the setting enabled to block usage if you would go over budget. Codespaces can be used for up to 60 hours a month before it would incur any costs. You can go to [Your Budget Settings](https://github.com/settings/billing/budgets) to make sure that this is the case.
 
 Once it starts, you just need to wait for it to finish loading. Once it says "press any key to continue," hit any key, then you can move to Getting Started.
-
 
 ## Getting Started
 

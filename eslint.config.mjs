@@ -15,9 +15,9 @@ const eslintConfig = defineConfig([
   ]),
   {
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    }
-  }
+      "source.fixAll": "explicit",
+    },
+  },
 ]);
 
 export default eslintConfig;
