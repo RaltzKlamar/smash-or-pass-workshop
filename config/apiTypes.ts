@@ -8,13 +8,13 @@ const fileSchema = z.object({
   ext: z.enum(extensions),
   size: z.number().int(),
   md5: z.string().length(32),
-  url: z.union([z.string().url(), z.null()]).transform(url => url ?? ''),
+  url: z.union([z.url(), z.null()]).transform(url => url ?? ''),
 });
 
 const previewSchema = z.object({
   width: z.number().int(),
   height: z.number().int(),
-  url: z.union([z.string().url(), z.null()]).transform(url => url ?? ''),
+  url: z.union([z.url(), z.null()]).transform(url => url ?? ''),
 });
 
 const scoreSchema = z.object({
